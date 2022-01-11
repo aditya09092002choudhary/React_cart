@@ -48,9 +48,12 @@ class AddItem extends React.Component {
             value={this.state.productPrice}
           />
         </div>
-        <button type="submit" className="btn btn-primary col-3 py-0">
+        <div className="col-4 mb-3">
+          <label htmlFor=""></label>
+        <button type="submit" className="btn btn-primary " style = {{padding:"15px 40px 15px",marginTop:"15px"}}>
           Add
         </button>
+        </div>
       </form>
     );
   }

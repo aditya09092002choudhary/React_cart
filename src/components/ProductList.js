@@ -1,13 +1,21 @@
 import React from "react";
-import Product from './Product.js';
+import Product from "./Product.js";
 
 export default function ProductList(props) {
-  console.log(props);
-  return (
-      props.productList.length>0 ?
-    props.productList.map((product,i)=>{
-        return <Product product = {product} key={i} increamentQuantity = {props.increamentQuantity} decreamentQuantity={props.decreamentQuantity} removeItem={props.removeItem} index={i}/>
+  return props.productList.length > 0 ? (
+    props.productList.map((product, i) => {
+      return (
+        <Product
+          product={product}
+          key={i}
+          incrementQuantity={props.incrementQuantity}
+          index={i}
+          decrementQuantity={props.decrementQuantity}
+          removeItem={props.removeItem}
+        />
+      );
     })
-    : <h1>No Product Exists in the Cart</h1>
+  ) : (
+    <h1>No Products Exists in the Carts</h1>
   );
 }

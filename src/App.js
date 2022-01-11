@@ -18,6 +18,11 @@ function App() {
       name: "Redmi Note 10S Max",
       quantity: 0,
     },
+    {
+      price: 150000,
+      name: "Samsung Z Fold",
+      quantity: 0,
+    },
   ];
 
   let [productList, setProductList] = useState(products);
@@ -64,8 +69,6 @@ function App() {
 
   const addItem = (name, price) => {
     let newProductList = [...productList];
-    if(name!==""){
-
     newProductList.push({
       price: price,
       name: name,
@@ -73,7 +76,6 @@ function App() {
     });
     setProductList(newProductList);
   };
-}
 
   return (
     <>
